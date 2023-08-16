@@ -14,3 +14,17 @@ export const setSocioLocationId = (chosenLocation) => {
   console.log(transientState);
 };
 // FUNCTION TO CONVERT TRANSIENT STATE TO PERMANENT STATE
+export const saveSurveySubmission = async () => {
+  const postOptions = {
+    method: "POST",
+    headers: {
+      "Content-type": "application/json",
+    },
+    body: JSON.stringify(transientState),
+  };
+
+  const response = await fetch(
+    "http://localhost:8088/submissions",
+    postOptions
+  );
+};
