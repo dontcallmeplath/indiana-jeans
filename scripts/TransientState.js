@@ -6,12 +6,10 @@ const transientState = {
 // FUNCTIONS TO MODIFY EACH PROPERTY OF TRANSIENT STATE
 export const setOwnsBlueJeans = (chosenOwnership) => {
   transientState.ownsBlueJeans = chosenOwnership;
-  console.log(transientState);
 };
 
 export const setSocioLocationId = (chosenLocation) => {
   transientState.socioLocationId = chosenLocation;
-  console.log(transientState);
 };
 // FUNCTION TO CONVERT TRANSIENT STATE TO PERMANENT STATE
 export const saveSurveySubmission = async () => {
