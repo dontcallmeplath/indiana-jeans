@@ -12,4 +12,7 @@ const render = async () => {
   const responseHTML = await SubmissionList();
   container.innerHTML = `${jeanOwnershipHTML} ${locationsHTML} <br>${buttonHTML} ${responseHTML}`;
 };
+
+document.addEventListener("newSubmissionCreated", render);
+
 render();
